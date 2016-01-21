@@ -1,4 +1,4 @@
-package edu.quest.java.config;
+package edu.toosquare.java.config;
 
 import java.util.Random;
 
