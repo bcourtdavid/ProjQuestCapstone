@@ -1,4 +1,4 @@
-package edu.toosquare.java.config;
+package edu.toosquare.java;
 
 import java.io.Serializable;
 
@@ -12,6 +12,7 @@ public class User implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
+	private String iduser;
 	private String first_name;
 	private String last_name;
 	private String email_address;
@@ -26,9 +27,10 @@ public class User implements Serializable {
 
 	}
 
-	public User(String first_name, String last_name, String email_address,
+	public User(String iduser, String first_name, String last_name, String email_address,
 			String phone_umber, String cc_number, String street_address,
 			String city, String state, String zip_code) {
+		this.iduser = iduser;
 		this.first_name = first_name;
 		this.last_name = last_name;
 		this.email_address = email_address;
@@ -38,6 +40,14 @@ public class User implements Serializable {
 		this.city = city;
 		this.state = state;
 		this.zip_code = zip_code;
+	}
+
+	public String getIduser() {
+		return iduser;
+	}
+
+	public void setIduser(String iduser) {
+		this.iduser = iduser;
 	}
 
 	public String getFirst_name() {
