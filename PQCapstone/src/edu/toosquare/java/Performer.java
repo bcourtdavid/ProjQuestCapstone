@@ -12,7 +12,8 @@ public class Performer implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private String iduser;
+	private long idperformer;
+	
 	private String group_name;
 	private String contact_firstName;
 	private String contact_lastName;
@@ -23,22 +24,22 @@ public class Performer implements Serializable {
 
 	}
 
-	public Performer(String iduser, String group_name, String contact_firtName,
+	public Performer(String group_name, String contact_firtName,
 			String contact_lastName, String contact_emailAddress,
-			String contact_phoneNumber, String talent) {
-		this.iduser = iduser;
+			String contact_phoneNumber) {
+		this.idperformer = idperformer;
 		this.group_name = group_name;
 		this.contact_firstName = contact_firstName;
 		this.contact_lastName = contact_lastName;
 		this.contact_emailAddress = contact_emailAddress;
 	}
 
-	public String getIduser() {
-		return iduser;
+	public String getIdperformer() {
+		return idperformer;
 	}
 
-	public void setIduser(String iduser) {
-		this.iduser = iduser;
+	public void setIdperformer(String idperformer) {
+		this.idperformer = idperformer;
 	}
 
 	public String getGroup_name() {
