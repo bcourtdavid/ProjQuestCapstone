@@ -9,14 +9,14 @@ import javax.persistence.Id;
 
 @Entity
 public class User implements Serializable {
-
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private String iduser;
+	private long iduser;
 	private String first_name;
 	private String last_name;
 	private String email_address;
 	private String phone_number;
+	private int number_of_tickets;
 	private String cc_number;
 	private String street_address;
 	private String city;
@@ -27,14 +27,14 @@ public class User implements Serializable {
 
 	}
 
-	public User(String iduser, String first_name, String last_name, String email_address,
-			String phone_umber, String cc_number, String street_address,
-			String city, String state, String zip_code) {
-		this.iduser = iduser;
+	public User(String first_name, String last_name, String email_address,
+			String phone_umber, int number_of_tickets, String cc_number, 
+			String street_address,String city, String state, String zip_code) {
 		this.first_name = first_name;
 		this.last_name = last_name;
 		this.email_address = email_address;
 		this.phone_number = phone_number;
+		this.number_of_tickets = number_of_tickets;
 		this.cc_number = cc_number;
 		this.street_address = street_address;
 		this.city = city;
@@ -42,11 +42,11 @@ public class User implements Serializable {
 		this.zip_code = zip_code;
 	}
 
-	public String getIduser() {
+	public long getIduser() {
 		return iduser;
 	}
 
-	public void setIduser(String iduser) {
+	public void setIduser(long iduser) {
 		this.iduser = iduser;
 	}
 
@@ -80,6 +80,14 @@ public class User implements Serializable {
 
 	public void setPhone_number(String phone_number) {
 		this.phone_number = phone_number;
+	}
+
+	public int getNumber_of_tickets() {
+		return number_of_tickets;
+	}
+
+	public void setNumber_of_tickets(int number_of_tickets) {
+		this.number_of_tickets = number_of_tickets;
 	}
 
 	public String getCc_number() {
