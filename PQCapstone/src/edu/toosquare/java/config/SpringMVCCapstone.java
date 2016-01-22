@@ -10,7 +10,7 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan(basePackages={"edu.quest.java"})
+@ComponentScan(basePackages={"edu.toosquare.java"})
 public class SpringMVCCapstone {
 	
 	@Bean
