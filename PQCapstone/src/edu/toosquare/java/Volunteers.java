@@ -22,15 +22,9 @@ public class Volunteers implements Serializable {
 	Volunteers() {
 
 	}
-
-<<<<<<< HEAD
-	public Volunteers(String first_name, String last_name,
-			String email_address, String phone_number, String comments) {
-		this.iduser = iduser;
-=======
+	
 	public Volunteers(String first_name, String last_name,String email_address, 
 			String phone_number, String comments) {
->>>>>>> 8e72cae3d2048efe29a82e1732da7b4cd2ecbfd6
 		this.first_name = first_name;
 		this.last_name = last_name;
 		this.email_address = email_address;
