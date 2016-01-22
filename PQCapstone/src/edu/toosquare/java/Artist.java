@@ -18,6 +18,7 @@ public class Artist implements Serializable {
 	private String email_address;
 	private String phone_number;
 	private String company_name;
+	
 	@OneToOne
 	private String talent;
 

@@ -31,11 +31,10 @@ public class Performer implements Serializable {
 		this.contact_lastName = contact_lastName;
 		this.contact_emailAddress = contact_emailAddress;
 	}
-
+	
 	public long getIdperformers() {
 		return idperformers;
 	}
-
 	public void setIdperformers(long idperformers) {
 		this.idperformers = idperformers;
 	}

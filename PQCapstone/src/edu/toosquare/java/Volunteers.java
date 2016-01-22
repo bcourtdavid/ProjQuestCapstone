@@ -22,7 +22,7 @@ public class Volunteers implements Serializable {
 	Volunteers() {
 
 	}
-
+	
 	public Volunteers(String first_name, String last_name,String email_address, 
 			String phone_number, String comments) {
 		this.first_name = first_name;
