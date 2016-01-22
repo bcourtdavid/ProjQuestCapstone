@@ -13,24 +13,23 @@ public class Product implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@OneToOne
-	private String iduser;
+	private long idproduct;
 	private String product;
 
 	Product() {
 
 	}
 
-	private Product(String iduser, String product) {
-		this.iduser = iduser;
+	private Product(String product) {
 		this.product = product;
 	}
 
-	public String getIduser() {
-		return iduser;
+	public long getIdproduct() {
+		return idproduct;
 	}
 
-	public void setIduser(String iduser) {
-		this.iduser = iduser;
+	public void setIduser(long idproduct) {
+		this.idproduct = idproduct;
 	}
 
 	public String getProduct() {

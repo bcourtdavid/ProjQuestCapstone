@@ -12,23 +12,23 @@ public class Talent {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@OneToOne
-	private String iduser;
+	private long idtalent;
 	private String talent;
 
 	Talent() {
 
 	}
 
-	public Talent(String iduser, String talent) {
+	public Talent(String talent) {
 		this.talent = talent;
 	}
 
-	public String getIduser() {
-		return iduser;
+	public long getIdtalent() {
+		return idtalent;
 	}
 
-	public void setIduser(String iduser) {
-		this.iduser = iduser;
+	public void setIdtalent(long idtalent) {
+		this.idtalent = idtalent;
 	}
 
 	public String getTalent() {

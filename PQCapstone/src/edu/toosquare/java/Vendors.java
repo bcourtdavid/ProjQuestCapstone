@@ -12,7 +12,7 @@ import javax.persistence.OneToOne;
 public class Vendors implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private String iduser;
+	private long idvendors;
 	private String first_name;
 	private String last_name;
 	private String email_address;
@@ -25,10 +25,8 @@ public class Vendors implements Serializable {
 
 	}
 
-	public Vendors(String iduser, String first_name, String last_name,
-			String email_address, String phone_number, String company_name,
-			String product) {
-		this.iduser = iduser;
+	public Vendors(String first_name, String last_name,String email_address, 
+			String phone_number, String company_name,String product) {
 		this.first_name = first_name;
 		this.last_name = last_name;
 		this.email_address = email_address;
@@ -37,12 +35,12 @@ public class Vendors implements Serializable {
 		this.product = product;
 	}
 
-	public String getIduser() {
-		return iduser;
+	public long getIdvendors() {
+		return idvendors;
 	}
 
-	public void setIduser(String iduser) {
-		this.iduser = iduser;
+	public void setIdvendors(long idvendors) {
+		this.idvendors = idvendors;
 	}
 
 	public String getFirst_name() {
@@ -92,5 +90,6 @@ public class Vendors implements Serializable {
 	public void setProduct(String product) {
 		this.product = product;
 	}
+
 
 }
