@@ -60,6 +60,7 @@ local.properties
 /src/main/resources/rebel.xml
 # External tool builders
 .externalToolBuilders/
+MANIFEST.MF
  
 # Locally stored "Eclipse launch configurations"
 *.launch
