@@ -70,3 +70,11 @@ MANIFEST.MF
  
 # PDT-specific
 .buildpath
+
+*.MF
+
+*.properties
+
+*.properties
+
+*.properties
