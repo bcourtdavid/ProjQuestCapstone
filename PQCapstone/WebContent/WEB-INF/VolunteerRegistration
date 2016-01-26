@@ -1,0 +1,63 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Volunteer Form</title>
+</head>
+<body>
+   <p align = "center" >
+   Please fill out form completely and accurately.
+   </p>
+   <p  align="center" >
+   Thank you<br/>
+   </p>
+   <hr/>
+
+<form action="writeTalent" method="get">   
+   Select Talent:><br>
+	<select name="Talent">
+		<option value="Vendor" selected> Vendor</option>
+		<option value="Perforrmer" selected> Performer</option>
+		<option value="Artist" selected> Artist</option>
+		<option value="Volunteer" selected> Volunteer</option>
+	</select>
+</form>
+	
+   <p> Personal Information:</p>
+<form action="writePersonalInformation" method="get">   
+   Select PersonalInformation:><br>
+	<select name="Personal Information">
+	<label> First Name:</label>
+	<input type="text"  name="first_Name">
+	<label> Last Name:</label>
+	<input type="text"  name="last_Name">
+	<label> Email Address:</label>
+	<input type="text"  name="email_Address">
+	<label> Contact Phone Number:</label>
+	<input type="text"  name="contact_PhoneNumber">
+	<input type="submit"  value="Submit">
+</form>
+
+	<p> Company Information:</p>
+<form action="writeCompanyInformation" method="get">   
+   Select CompanyInformation:><br>
+	<select name="Company Information">
+	<label> Company Name:</label>
+	<input type="text"  name="company_Name">
+	<label> Group Name:</label>
+	<input type="text"  name="group_Name">
+	<label> Vendor Type:</label>
+	<input type="text"  name="vendor_Type">
+	<input type="submit"  value="Submit">  
+</form>	
+<hr><hr/>
+
+<h3 style="background: blue; color: white">My Footer</h3>
+	<p>Thank you for your time and cooperation.<br/>
+	<p align="center" >
+  	</p>
+
+</body>
+</html>
