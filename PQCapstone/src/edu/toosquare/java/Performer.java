@@ -24,7 +24,7 @@ public class Performer implements Serializable {
 
 	public Performer(String group_name, String contact_firtName,
 			String contact_lastName, String contact_emailAddress,
-			String contact_phoneNumber, String talent) {
+			String contact_phoneNumber) {
 		this.group_name = group_name;
 		this.contact_firstName = contact_firstName;
 		this.contact_lastName = contact_lastName;
