@@ -30,6 +30,7 @@ public class Artist implements Serializable {
 		this.first_name = first_name;
 		this.last_name = last_name;
 		this.email_address = email_address;
+		this.phone_number = phone_number;
 		this.company_name = company_name;
 		this.talent = talent;
 	}
