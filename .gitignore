@@ -60,7 +60,6 @@ local.properties
 /src/main/resources/rebel.xml
 # External tool builders
 .externalToolBuilders/
-MANIFEST.MF
  
 # Locally stored "Eclipse launch configurations"
 *.launch
@@ -71,7 +70,7 @@ MANIFEST.MF
 # PDT-specific
 .buildpath
 
-*.MF
+**/*.MF
 
 *.properties
 
