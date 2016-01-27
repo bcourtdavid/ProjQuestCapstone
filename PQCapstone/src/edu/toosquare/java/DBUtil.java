@@ -1,17 +1,41 @@
 package edu.toosquare.java;
 
-/**
- * Utility class from Murach p.437
- */
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
+import org.springframework.context.annotation.Bean;
+
 public class DBUtil {
-	private static final EntityManagerFactory emf = 
+	/*
+	 * creates EntityManagerFactory
+	 */
+	private static final EntityManagerFactory emf =
 			Persistence.createEntityManagerFactory("jdbc");
 	
-	public static EntityManagerFactory getEmFactory() {
+	private static EntityManagerFactory getEmFactory() {
 		return emf;
+	
 	}
+@Bean
+public UserDaoJpaImpl getUserDoa() {
+	return new UserDaoJpaImpl();
+}
+@Bean
+public ArtistDaoJpaImpl getArtistDoa() {
+	return new ArtistDaoJpaImpl();
+}
+@Bean
+public PerformerDaoJpaImpl getPerformerDoa() {
+	return new PerformerDaoJpaImpl();
+}
+@Bean
+public VendorsDaoJpaImpl getVendorsDao() {
+	return new VendorsDaoJpaImpl();
+}
+@Bean
+public VolunteersDaoJpaImpl getVolunteersDao() {
+	return new VolunteersDaoJpaImpl();
+}
 
 }
+

@@ -11,6 +11,7 @@ import javax.persistence.Id;
 public class User implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
+	private long id;
 	private String first_name;
 	private String last_name;
 	private String email_address;
@@ -20,13 +21,21 @@ public class User implements Serializable {
 
 	}
 
-	public User(String first_name, String last_name, String email_address, String phone_number) {
+	public User(long id, String first_name, String last_name, String email_address, String phone_number) {
+		this.id = id;
 		this.first_name = first_name;
 		this.last_name = last_name;
 		this.email_address = email_address;
 		this.phone_number = phone_number;
 	}
-		
+
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
 
 	public String getFirst_name() {
 		return first_name;
@@ -59,6 +68,7 @@ public class User implements Serializable {
 	public void setPhone_number(String phone_number) {
 		this.phone_number = phone_number;
 	}
+		
 }
 	
 
