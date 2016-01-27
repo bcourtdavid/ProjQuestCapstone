@@ -12,6 +12,7 @@ public class Volunteers implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
+	private long id;
 	private String first_name;
 	private String last_name;
 	private String email_address;
@@ -21,12 +22,21 @@ public class Volunteers implements Serializable {
 
 	}
 	
-	public Volunteers(String first_name, String last_name,String email_address, String comments) {
+	public Volunteers(long id, String first_name, String last_name,String email_address, String comments) {
+		this.id = id;
 		this.first_name = first_name;
 		this.last_name = last_name;
 		this.email_address = email_address;
 		this.comments = comments;
 
+	}
+
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
 	}
 
 	public String getFirst_name() {
@@ -60,6 +70,5 @@ public class Volunteers implements Serializable {
 	public void setComments(String comments) {
 		this.comments = comments;
 	}
-
 
 }
