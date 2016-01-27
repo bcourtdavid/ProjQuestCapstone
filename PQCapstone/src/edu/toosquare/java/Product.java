@@ -12,20 +12,23 @@ public class Product implements Serializable{
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private String product;
+	private Product product;
 	
 	Product() {
 		
 	}
-		public Product(String product) {
+		public Product(Product product) {
 			this.product = product;
 		}
 
-	public String getProduct() {
+	public Product getProduct() {
 		return product;
 	}
 
-	public void setProduct(String product) {
+	public void setProduct(Product product) {
+		this.product = product;
+	}
+	public Product(String Product) {
 		this.product = product;
 	}
 	

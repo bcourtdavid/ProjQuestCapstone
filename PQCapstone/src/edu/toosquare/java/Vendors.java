@@ -18,14 +18,14 @@ public class Vendors implements Serializable {
 	private String phone_number;
 	private String company_name;
 	@OneToOne
-	private String product;
+	private Product product;
 
 	Vendors() {
 
 	}
 
 	public Vendors(String first_name, String last_name,String email_address, 
-			String phone_number, String company_name,String product) {
+			String phone_number, String company_name,Product product) {
 		this.first_name = first_name;
 		this.last_name = last_name;
 		this.email_address = email_address;
@@ -74,11 +74,11 @@ public class Vendors implements Serializable {
 		this.company_name = company_name;
 	}
 
-	public String getProduct() {
+	public Product getProduct() {
 		return product;
 	}
 
-	public void setProduct(String product) {
+	public void setProduct(Product product) {
 		this.product = product;
 	}
 
