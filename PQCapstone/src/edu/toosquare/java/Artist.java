@@ -18,22 +18,18 @@ public class Artist implements Serializable {
 	private String email_address;
 	private String phone_number;
 	private String company_name;
-	
-	@OneToOne
-	private String talent;
 
 	Artist() {
 
 	}
 
 	public Artist(long id, String first_name, String last_name, String email_address,
-			String phone_number, String company_name, String talent) {
+			String phone_number, String company_name) {
 		this.id = id;
 		this.first_name = first_name;
 		this.last_name = last_name;
 		this.email_address = email_address;
 		this.company_name = company_name;
-		this.talent = talent;
 	}
 
 	public long getId() {
@@ -83,15 +79,6 @@ public class Artist implements Serializable {
 	public void setCompany_name(String company_name) {
 		this.company_name = company_name;
 	}
-
-	public String getTalent() {
-		return talent;
-	}
-
-	public void setTalent(String talent) {
-		this.talent = talent;
-	}
-
 }
 
 
