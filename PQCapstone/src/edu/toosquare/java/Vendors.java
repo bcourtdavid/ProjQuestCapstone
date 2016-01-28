@@ -9,7 +9,7 @@ import javax.persistence.Id;
 import javax.persistence.OneToOne;
 
 @Entity
-public class Artist implements Serializable {
+public class Vendors implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
@@ -18,22 +18,22 @@ public class Artist implements Serializable {
 	private String email_address;
 	private String phone_number;
 	private String company_name;
-	
 	@OneToOne
-	private String talent;
+	private Product product;
 
-	Artist() {
+	Vendors() {
 
 	}
 
-	public Artist(long id, String first_name, String last_name, String email_address,
-			String phone_number, String company_name, String talent) {
+	public Vendors(long id, String first_name, String last_name,String email_address, 
+			String phone_number, String company_name,Product product) {
 		this.id = id;
 		this.first_name = first_name;
 		this.last_name = last_name;
 		this.email_address = email_address;
+		this.phone_number = phone_number;
 		this.company_name = company_name;
-		this.talent = talent;
+		this.product = product;
 	}
 
 	public long getId() {
@@ -84,14 +84,11 @@ public class Artist implements Serializable {
 		this.company_name = company_name;
 	}
 
-	public String getTalent() {
-		return talent;
+	public Product getProduct() {
+		return product;
 	}
 
-	public void setTalent(String talent) {
-		this.talent = talent;
+	public void setProduct(Product product) {
+		this.product = product;
 	}
-
 }
-
-

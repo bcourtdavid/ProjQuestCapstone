@@ -6,34 +6,29 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToOne;
 
 @Entity
-public class Artist implements Serializable {
+public class Volunteers implements Serializable {
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
 	private String first_name;
 	private String last_name;
 	private String email_address;
-	private String phone_number;
-	private String company_name;
-	
-	@OneToOne
-	private String talent;
+	private String comments;
 
-	Artist() {
+	Volunteers() {
 
 	}
-
-	public Artist(long id, String first_name, String last_name, String email_address,
-			String phone_number, String company_name, String talent) {
+	
+	public Volunteers(long id, String first_name, String last_name,String email_address, String comments) {
 		this.id = id;
 		this.first_name = first_name;
 		this.last_name = last_name;
 		this.email_address = email_address;
-		this.company_name = company_name;
-		this.talent = talent;
+		this.comments = comments;
+
 	}
 
 	public long getId() {
@@ -68,30 +63,12 @@ public class Artist implements Serializable {
 		this.email_address = email_address;
 	}
 
-	public String getPhone_number() {
-		return phone_number;
+	public String getComments() {
+		return comments;
 	}
 
-	public void setPhone_number(String phone_number) {
-		this.phone_number = phone_number;
-	}
-
-	public String getCompany_name() {
-		return company_name;
-	}
-
-	public void setCompany_name(String company_name) {
-		this.company_name = company_name;
-	}
-
-	public String getTalent() {
-		return talent;
-	}
-
-	public void setTalent(String talent) {
-		this.talent = talent;
+	public void setComments(String comments) {
+		this.comments = comments;
 	}
 
 }
-
-

@@ -47,45 +47,45 @@ public class TestController {
 		    //user4 = new User("Terry", "Wolf", "xdragonspiritx@gmail.com", "210-988-3932","4555-56955-19885", "695 Leo Street", "San Antonio", "TX", "78247"); 
 
 			// create some vendors
-			vender1 = new Vendors("Gus", "Campos", "Gcampos@gmail.com", "210-239-4892", "Gus' Empanadas", new Product("Mexican"));
-			vender2 = new Vendors("Tikos", "Chamoyadas", "Trodriguez@yahoo.com", "210-832-3847", "Tikos Chamoyadas", new Product("Mexican"));
-			vendor3 = new Vendors("Robert", "Garcia", "Rgarcia@garcia.net", "210-545-3264", "Mr. Fish", new Product("Seafood"));
-			vendor4 = new Vendors("James", "McClelan", "Jmcclelan@gmail.com", "210-739-3827", "Smoke BBQ", new Product("BBQ"));
-			vendor5 = new Vendors("Lia", "Johnson", "Ljohnson@gmail.com", "210-583-4842", "Khoury's Mediterranean Grill",new Product("Mediterranean"));
-			vendor6 = new Vendors("Phil", "Harris", "Pharris@gmail.com", "210-232-5934", "Philly's Phamous Cheesesteaks", new Product("American"));
-			vendor7 = new Vendors("Jane", "Clark", "Jclark@yahoo", "210-458-2843", "CheesyJane's",new Product("American"));
-			vendor8 = new Vendors("Mattew", "Pezez", "Mperez@gmail.com", "210-387-3737", "Smoke Shack BBQ", new Product("BBQ"));
+			vender1 = new Vendors(id(),"Gus", "Campos", "Gcampos@gmail.com", "210-239-4892", "Gus' Empanadas", new Product("Mexican"));
+			vender2 = new Vendors(0,"Tikos", "Chamoyadas", "Trodriguez@yahoo.com", "210-832-3847", "Tikos Chamoyadas", new Product("Mexican"));
+			vendor3 = new Vendors(0,"Robert", "Garcia", "Rgarcia@garcia.net", "210-545-3264", "Mr. Fish", new Product("Seafood"));
+			vendor4 = new Vendors(0,"James", "McClelan", "Jmcclelan@gmail.com", "210-739-3827", "Smoke BBQ", new Product("BBQ"));
+			vendor5 = new Vendors(0,"Lia", "Johnson", "Ljohnson@gmail.com", "210-583-4842", "Khoury's Mediterranean Grill",new Product("Mediterranean"));
+			vendor6 = new Vendors(0,"Phil", "Harris", "Pharris@gmail.com", "210-232-5934", "Philly's Phamous Cheesesteaks", new Product("American"));
+			vendor7 = new Vendors(0,"Jane", "Clark", "Jclark@yahoo", "210-458-2843", "CheesyJane's",new Product("American"));
+			vendor8 = new Vendors(0,"Mattew", "Pezez", "Mperez@gmail.com", "210-387-3737", "Smoke Shack BBQ", new Product("BBQ"));
 
 			// create some artist
-			artist1 = new Artist("Doneen", "Chandler", "Mrodriguez@SADC.com", "210-555-0987", "San Antonio Dance Company", "Folkorico Dance");
-			artist2 = new Artist("Stephanie", "Miller", "Smiller@GCA.com", "210-366-3844", "Guadalupe Cultural Arts", "Folkorico Dance");
-			artist3 = new Artist("Susan", "Budge", "Sbudge@budge.net", "210-349-3943","Sbudge, Inc.", "Sculpture");
-			artist4 = new Artist("Diana","Kersey", "Dkersey@kersey.net", "210-474-3345", "Kersey Ceramics", "Ceramics");
-			artist5 = new Artist("Susan", "Budge", "Sbudge@budge.net", "210-349-3943", "Sbudge, Inc.", "Ceramic");
-			artist6 = new Artist("Nancy","Hines", "Nhines@Sastudios.com", "210-884-4598", "Hines Studios", "Painting");
-			artist7 = new Artist("Bill", "FitzGibbons", "Bgibbons@Fitz.com", "210-888-2389", "FitzGibbons Scultures, Inc.", "Steel Sculpture");
-			artist8 = new Artist("Nic", "Boblique", "Nboblique@att.net", "210-934-7123", "Bobliqque, Inc.", "Steel Sculpture");
-			artist9 = new Artist("Bill", "FitzGibbons", "Bgibbons@Fitz.com", "210-888-2387", "FitzGibbons Scultures, Inc.", "Light Show");
-			artist10 = new Artist("Xavier", "DeRichemont", "Xrichemont@att.net", "210-487-6294", "DeRichemont Lights", "Light Show");
+			artist1 = new Artist(0,"Doneen", "Chandler", "Mrodriguez@SADC.com", "210-555-0987", "San Antonio Dance Company", "Folkorico Dance");
+			artist2 = new Artist(0, "Stephanie", "Miller", "Smiller@GCA.com", "210-366-3844", "Guadalupe Cultural Arts", "Folkorico Dance");
+			artist3 = new Artist(0,"Susan", "Budge", "Sbudge@budge.net", "210-349-3943","Sbudge, Inc.", "Sculpture");
+			artist4 = new Artist(0,"Diana","Kersey", "Dkersey@kersey.net", "210-474-3345", "Kersey Ceramics", "Ceramics");
+			artist5 = new Artist(0,"Susan", "Budge", "Sbudge@budge.net", "210-349-3943", "Sbudge, Inc.", "Ceramic");
+			artist6 = new Artist(0,"Nancy","Hines", "Nhines@Sastudios.com", "210-884-4598", "Hines Studios", "Painting");
+			artist7 = new Artist(0,"Bill", "FitzGibbons", "Bgibbons@Fitz.com", "210-888-2389", "FitzGibbons Scultures, Inc.", "Steel Sculpture");
+			artist8 = new Artist(0,"Nic", "Boblique", "Nboblique@att.net", "210-934-7123", "Bobliqque, Inc.", "Steel Sculpture");
+			artist9 = new Artist(0,"Bill", "FitzGibbons", "Bgibbons@Fitz.com", "210-888-2387", "FitzGibbons Scultures, Inc.", "Light Show");
+			artist10 = new Artist(0,"Xavier", "DeRichemont", "Xrichemont@att.net", "210-487-6294", "DeRichemont Lights", "Light Show");
 
 			// create some performers
-			performer1 = new Performer("Cactus County Band", "Eddie", "Lewis", "Elewis@gmail.com", "210-987-8765");
-			performer2 = new Performer("La Sombra", "August", "Stewart", "Astewart@att.net", "210-324-2356");
-			performer3 = new Performer("SA Light", "John", "Esparza", "jesparza@att.net", "210-675-0987");
-			performer4 = new Performer("Clint Taft & the Buck Wild Band", "Marcus","Aubriel", "Maubriel@yahoo.com", "210-456-7890");
-			performer5 = new Performer("Texas Tornados", "Steven","Martinez", "Smartinez@gmail.com", "210-345-2312");
-			performer6 = new Performer("Lonely Horse", "Tanner","Payne", "tpaine@yahoo.com", "512-673-2567");
-			performer7 = new Performer("Texas Unlimited Band", "Jashua","Brown", "jbrown@yahoo.com", "210-768-0567");
-			performer8 = new Performer("Los Palominos", "Jim","Garcia", "Jgarcia@att.net", "210-546-2984");
-			performer9 = new Performer("Nothng More", "Robert","Fernandez", "Rfernandez@gmail.com", "512-232-2342");
-			performer10 = new Performer("Zak Perry Band", "Zak","Perry", "zperry@gmail.com", "512-672-48565");
-			performer11 = new Performer("Los Musicales", "Sam","Rodriguez", "Srodriguez@yahoo.com", "856-983-4134");
+			performer1 = new Performer(0, "Cactus County Band", "Eddie", "Lewis", "Elewis@gmail.com", "210-987-8765");
+			performer2 = new Performer(0, "La Sombra", "August", "Stewart", "Astewart@att.net", "210-324-2356");
+			performer3 = new Performer(0, "SA Light", "John", "Esparza", "jesparza@att.net", "210-675-0987");
+			performer4 = new Performer(0, "Clint Taft & the Buck Wild Band", "Marcus","Aubriel", "Maubriel@yahoo.com", "210-456-7890");
+			performer5 = new Performer(0, "Texas Tornados", "Steven","Martinez", "Smartinez@gmail.com", "210-345-2312");
+			performer6 = new Performer(0, "Lonely Horse", "Tanner","Payne", "tpaine@yahoo.com", "512-673-2567");
+			performer7 = new Performer(0, "Texas Unlimited Band", "Jashua","Brown", "jbrown@yahoo.com", "210-768-0567");
+			performer8 = new Performer(0, "Los Palominos", "Jim","Garcia", "Jgarcia@att.net", "210-546-2984");
+			performer9 = new Performer(0, "Nothng More", "Robert","Fernandez", "Rfernandez@gmail.com", "512-232-2342");
+			performer10 = new Performer(0, "Zak Perry Band", "Zak","Perry", "zperry@gmail.com", "512-672-48565");
+			performer11 = new Performer(0, "Los Musicales", "Sam","Rodriguez", "Srodriguez@yahoo.com", "856-983-4134");
 
 			// create some volunteer
-			volunteer1 = new Volunteers("Jonathan", "Sakian", "Jsakian@yahoo.com", "comments");
-			volunteer2 = new Volunteers("Hector", "Hernandez", "Hhernandez@yahoo.com", "comments");
-			volunteer3 = new Volunteers("Jonathan", "Graff", "Jgraff@gmail.com", "comments");
-			volunteer4 = new Volunteers("Peter","Isburgh", "Pisburgh@yahoo.com", "comments");
+			volunteer1 = new Volunteers(0,"Jonathan", "Sakian", "Jsakian@yahoo.com", "comments");
+			volunteer2 = new Volunteers(0,"Hector", "Hernandez", "Hhernandez@yahoo.com", "comments");
+			volunteer3 = new Volunteers(0,"Jonathan", "Graff", "Jgraff@gmail.com", "comments");
+			volunteer4 = new Volunteers(0,"Peter","Isburgh", "Pisburgh@yahoo.com", "comments");
 
 			//persist just the User objects to test CascadeType.PERSIST
 			//em.persist(user1);
