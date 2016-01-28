@@ -16,11 +16,10 @@ public class VolunteersDaoJpaImpl implements VolunteersDao {
 	EntityManagerFactory emf;
 	
 	@Override
-	public boolean create(Volunteers obj){
+	public void create(Volunteers obj){
 		System.out.println("In VolunteersDaoJpaImpl.create()");
 		EntityManager em = emf.createEntityManager();
 		EntityTransaction trans = em.getTransaction();
-		boolean result = true;
 		
 		try {
 			System.out.println("In VolunteersDaoJpaImpl.create()" + trans);
@@ -31,12 +30,10 @@ public class VolunteersDaoJpaImpl implements VolunteersDao {
 		catch (Exception ex) {
 			trans.rollback();
 			System.out.println("Rollback due to [" + ex + "]");
-			result = false;
 		}
 		finally {
 			em.close();
 		}
-		return result;
 	}
 	
 	@Override
@@ -69,10 +66,9 @@ public class VolunteersDaoJpaImpl implements VolunteersDao {
 			return null;
 	}
 	@Override
-	public boolean update(Volunteers obj) {
+	public void update(Volunteers obj) {
 		EntityManager em = emf.createEntityManager();
 		EntityTransaction trans = em.getTransaction();
-		boolean result = true;
 		
 		try {
 			trans.begin();
@@ -82,19 +78,17 @@ public class VolunteersDaoJpaImpl implements VolunteersDao {
 		catch (Exception ex) {
 			trans.rollback();
 			System.out.println("Rollback due to [" + ex + "]");
-			result = false;
 		}
 		finally {
 			em.close();
+			System.out.println("Volunteers prints out successfully");
 		}
-		return result;
 	}
 	
 	@Override
-	public boolean delete(Volunteers obj) {
+	public void delete(Volunteers obj) {
 		EntityManager em = emf.createEntityManager();
 		EntityTransaction trans = em.getTransaction();
-		boolean result = true;
 		
 		try {
 			trans.begin();
@@ -104,11 +98,9 @@ public class VolunteersDaoJpaImpl implements VolunteersDao {
 		catch (Exception ex) {
 			trans.rollback();
 			System.out.println("Rollback dur to [" + ex + "]");
-			result = false;
 		}
 		finally {
 			em.close();
 		}
-		return result;
 	}
 }

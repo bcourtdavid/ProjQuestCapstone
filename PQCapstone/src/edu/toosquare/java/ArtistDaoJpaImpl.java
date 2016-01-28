@@ -16,11 +16,10 @@ public class ArtistDaoJpaImpl implements ArtistDao{
 	EntityManagerFactory emf;
 	
 	@Override
-	public boolean create(Artist obj){
-		System.out.println("In ArtistDaoJpaImpl.create()");
+	public void create(Artist obj){
+		System.out.println("In ArtistDaoJpaImpl.create(Artist)");
 		EntityManager em = emf.createEntityManager();
 		EntityTransaction trans = em.getTransaction();
-		boolean result = true;
 		
 		try {
 			System.out.println("In ArtistDaoJpaImpl.create()" + trans);
@@ -31,12 +30,13 @@ public class ArtistDaoJpaImpl implements ArtistDao{
 		catch (Exception ex) {
 			trans.rollback();
 			System.out.println("Rollback due to [" + ex + "]");
-			result = false;
+		
 		}
 		finally {
 			em.close();
+			System.out.println("Artist prints out successfully");
 		}
-		return result;
+	
 	}
 	
 	@Override
@@ -69,10 +69,9 @@ public class ArtistDaoJpaImpl implements ArtistDao{
 			return null;
 	}
 	@Override
-	public boolean update(Artist obj) {
+	public void update(Artist obj) {
 		EntityManager em = emf.createEntityManager();
 		EntityTransaction trans = em.getTransaction();
-		boolean result = true;
 		
 		try {
 			trans.begin();
@@ -82,16 +81,14 @@ public class ArtistDaoJpaImpl implements ArtistDao{
 		catch (Exception ex) {
 			trans.rollback();
 			System.out.println("Rollback due to [" + ex + "]");
-			result = false;
 		}
 		finally {
 			em.close();
 		}
-		return result;
 	}
 	
 	@Override
-	public boolean delete(Artist obj) {
+	public void delete(Artist obj) {
 		EntityManager em = emf.createEntityManager();
 		EntityTransaction trans = em.getTransaction();
 		boolean result = true;
@@ -109,6 +106,6 @@ public class ArtistDaoJpaImpl implements ArtistDao{
 		finally {
 			em.close();
 		}
-		return result;
-	}
+		
+		}
 }

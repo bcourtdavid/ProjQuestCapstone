@@ -16,11 +16,10 @@ public class UserDaoJpaImpl implements UserDao {
 	EntityManagerFactory emf;
 	
 	@Override
-	public boolean create(User obj){
+	public void create(User obj){
 		System.out.println("In UserDaoJpaImpl.create()");
 		EntityManager em = emf.createEntityManager();
 		EntityTransaction trans = em.getTransaction();
-		boolean result = true;
 		
 		try {
 			System.out.println("In EntityUserDaoJpaImpl.create()" + trans);
@@ -31,12 +30,10 @@ public class UserDaoJpaImpl implements UserDao {
 		catch (Exception ex) {
 			trans.rollback();
 			System.out.println("Rollback due to [" + ex + "]");
-			result = false;
 		}
 		finally {
 			em.close();
 		}
-		return result;
 	}
 	
 	@Override
@@ -69,10 +66,9 @@ public class UserDaoJpaImpl implements UserDao {
 			return null;
 	}
 	@Override
-	public boolean update(User obj) {
+	public void update(User obj) {
 		EntityManager em = emf.createEntityManager();
 		EntityTransaction trans = em.getTransaction();
-		boolean result = true;
 		
 		try {
 			trans.begin();
@@ -82,19 +78,17 @@ public class UserDaoJpaImpl implements UserDao {
 		catch (Exception ex) {
 			trans.rollback();
 			System.out.println("Rollback due to [" + ex + "]");
-			result = false;
 		}
 		finally {
 			em.close();
+			System.out.println("User prints out successfully");
 		}
-		return result;
 	}
 	
 	@Override
-	public boolean delete(User obj) {
+	public void delete(User obj) {
 		EntityManager em = emf.createEntityManager();
 		EntityTransaction trans = em.getTransaction();
-		boolean result = true;
 		
 		try {
 			trans.begin();
@@ -104,12 +98,10 @@ public class UserDaoJpaImpl implements UserDao {
 		catch (Exception ex) {
 			trans.rollback();
 			System.out.println("Rollback dur to [" + ex + "]");
-			result = false;
 		}
 		finally {
 			em.close();
 		}
-		return result;
 	}
 	}
 	
