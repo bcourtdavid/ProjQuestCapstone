@@ -24,21 +24,12 @@ public class Performer implements Serializable {
 	}
 
 	public Performer(long id, String group_name, String contact_firtName,
-			String contact_lastName, String contact_emailAddress,
-<<<<<<< HEAD
-			String contact_phoneNumber) {
-=======
-			String contact_phoneNumber, String talent) {
->>>>>>> origin/master
+			String contact_lastName, String contact_emailAddress, String contact_phoneNumber){
 		this.id = id;
 		this.group_name = group_name;
 		this.contact_firstName = contact_firstName;
 		this.contact_lastName = contact_lastName;
 		this.contact_emailAddress = contact_emailAddress;
-<<<<<<< HEAD
-		this.contact_phoneNumber = contact_phoneNumber;
-=======
->>>>>>> origin/master
 	}
 
 	public long getId() {
