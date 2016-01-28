@@ -19,22 +19,15 @@ public class Vendors implements Serializable {
 	private String phone_number;
 	private String company_name;
 	@OneToOne
-<<<<<<< HEAD
 	private Product product;
-=======
-	private String product;
->>>>>>> origin/master
 
 	Vendors() {
 
 	}
 
 	public Vendors(long id, String first_name, String last_name,String email_address, 
-<<<<<<< HEAD
 			String phone_number, String company_name,Product product) {
-=======
-			String phone_number, String company_name,String product) {
->>>>>>> origin/master
+
 		this.id = id;
 		this.first_name = first_name;
 		this.last_name = last_name;
@@ -92,7 +85,6 @@ public class Vendors implements Serializable {
 		this.company_name = company_name;
 	}
 
-<<<<<<< HEAD
 	public Product getProduct() {
 		return product;
 	}
@@ -100,14 +92,4 @@ public class Vendors implements Serializable {
 	public void setProduct(Product product) {
 		this.product = product;
 	}
-=======
-	public String getProduct() {
-		return product;
-	}
-
-	public void setProduct(String product) {
-		this.product = product;
-	}
-
->>>>>>> origin/master
 }

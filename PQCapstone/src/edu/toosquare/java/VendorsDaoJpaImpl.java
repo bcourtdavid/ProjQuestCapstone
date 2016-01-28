@@ -16,11 +16,10 @@ public class VendorsDaoJpaImpl implements VendorsDao {
 	EntityManagerFactory emf;
 	
 	@Override
-	public boolean create(Vendors obj){
+	public void create(Vendors obj){
 		System.out.println("In VendorsDaoJpaImpl.create()");
 		EntityManager em = emf.createEntityManager();
 		EntityTransaction trans = em.getTransaction();
-		boolean result = true;
 		
 		try {
 			System.out.println("In VendorsDaoJpaImpl.create()" + trans);
@@ -31,12 +30,13 @@ public class VendorsDaoJpaImpl implements VendorsDao {
 		catch (Exception ex) {
 			trans.rollback();
 			System.out.println("Rollback due to [" + ex + "]");
-			result = false;
+
 		}
 		finally {
 			em.close();
+			System.out.println("Vendors prints out successfully");
 		}
-		return result;
+	
 	}
 	
 	@Override
@@ -69,10 +69,9 @@ public class VendorsDaoJpaImpl implements VendorsDao {
 			return null;
 	}
 	@Override
-	public boolean update(Vendors obj) {
+	public void update(Vendors obj) {
 		EntityManager em = emf.createEntityManager();
 		EntityTransaction trans = em.getTransaction();
-		boolean result = true;
 		
 		try {
 			trans.begin();
@@ -82,19 +81,18 @@ public class VendorsDaoJpaImpl implements VendorsDao {
 		catch (Exception ex) {
 			trans.rollback();
 			System.out.println("Rollback due to [" + ex + "]");
-			result = false;
+	
 		}
 		finally {
 			em.close();
+			System.out.println("Vendors prints out successfully");
 		}
-		return result;
 	}
 	
 	@Override
-	public boolean delete(Vendors obj) {
+	public void delete(Vendors obj) {
 		EntityManager em = emf.createEntityManager();
 		EntityTransaction trans = em.getTransaction();
-		boolean result = true;
 		
 		try {
 			trans.begin();
@@ -104,11 +102,9 @@ public class VendorsDaoJpaImpl implements VendorsDao {
 		catch (Exception ex) {
 			trans.rollback();
 			System.out.println("Rollback dur to [" + ex + "]");
-			result = false;
 		}
 		finally {
 			em.close();
 		}
-		return result;
 	}
 }

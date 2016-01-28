@@ -16,12 +16,11 @@ public class ProductDaoJpaImpl implements ProductDao {
 	EntityManagerFactory emf;
 	
 	@Override
-	public boolean create(Product obj){
+	public void create(Product obj){
 		System.out.println("In ProductDaoJpaImpl.create()");
 		EntityManager em = emf.createEntityManager();
 		EntityTransaction trans = em.getTransaction();
-		boolean result = true;
-		
+	
 		try {
 			System.out.println("In ProductDaoJpaImpl.create()" + trans);
 			trans.begin();
@@ -31,12 +30,10 @@ public class ProductDaoJpaImpl implements ProductDao {
 		catch (Exception ex) {
 			trans.rollback();
 			System.out.println("Rollback due to [" + ex + "]");
-			result = false;
 		}
 		finally {
 			em.close();
 		}
-		return result;
 	}
 	
 	@Override
@@ -69,10 +66,9 @@ public class ProductDaoJpaImpl implements ProductDao {
 			return null;
 	}
 	@Override
-	public boolean update(Product obj) {
+	public void update(Product obj) {
 		EntityManager em = emf.createEntityManager();
 		EntityTransaction trans = em.getTransaction();
-		boolean result = true;
 		
 		try {
 			trans.begin();
@@ -82,19 +78,17 @@ public class ProductDaoJpaImpl implements ProductDao {
 		catch (Exception ex) {
 			trans.rollback();
 			System.out.println("Rollback due to [" + ex + "]");
-			result = false;
 		}
 		finally {
 			em.close();
+			System.out.println("Product prints out successfully");
 		}
-		return result;
 	}
 	
 	@Override
-	public boolean delete(Product obj) {
+	public void delete(Product obj) {
 		EntityManager em = emf.createEntityManager();
 		EntityTransaction trans = em.getTransaction();
-		boolean result = true;
 		
 		try {
 			trans.begin();
@@ -104,11 +98,9 @@ public class ProductDaoJpaImpl implements ProductDao {
 		catch (Exception ex) {
 			trans.rollback();
 			System.out.println("Rollback dur to [" + ex + "]");
-			result = false;
 		}
 		finally {
 			em.close();
 		}
-		return result;
 	}
 }

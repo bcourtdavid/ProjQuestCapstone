@@ -3,9 +3,9 @@ package edu.toosquare.java;
 import java.util.List;
 
 public interface PerformerDao {
-	boolean create(Performer obj);
+	void create(Performer obj);
 	Performer findById(long id);
 	List<Performer> getAll();
-	boolean update(Performer obj);
-	boolean delete(Performer obj);
+	void update(Performer obj);
+	void delete(Performer obj);
 }

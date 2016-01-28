@@ -16,11 +16,11 @@ public class PerformerDaoJpaImpl implements PerformerDao {
 	EntityManagerFactory emf;
 	
 	@Override
-	public boolean create(Performer obj){
+	public void create(Performer obj){
 		System.out.println("In PerformerDaoJpaImpl.create()");
 		EntityManager em = emf.createEntityManager();
 		EntityTransaction trans = em.getTransaction();
-		boolean result = true;
+		
 		
 		try {
 			System.out.println("In PerformerDaoJpaImpl.create()" + trans);
@@ -31,12 +31,10 @@ public class PerformerDaoJpaImpl implements PerformerDao {
 		catch (Exception ex) {
 			trans.rollback();
 			System.out.println("Rollback due to [" + ex + "]");
-			result = false;
 		}
 		finally {
 			em.close();
 		}
-		return result;
 	}
 	
 	@Override
@@ -69,10 +67,9 @@ public class PerformerDaoJpaImpl implements PerformerDao {
 			return null;
 	}
 	@Override
-	public boolean update(Performer obj) {
+	public void update(Performer obj) {
 		EntityManager em = emf.createEntityManager();
 		EntityTransaction trans = em.getTransaction();
-		boolean result = true;
 		
 		try {
 			trans.begin();
@@ -82,19 +79,17 @@ public class PerformerDaoJpaImpl implements PerformerDao {
 		catch (Exception ex) {
 			trans.rollback();
 			System.out.println("Rollback due to [" + ex + "]");
-			result = false;
 		}
 		finally {
 			em.close();
+			System.out.println("Performer prints out successfully");
 		}
-		return result;
 	}
 	
 	@Override
-	public boolean delete(Performer obj) {
+	public void delete(Performer obj) {
 		EntityManager em = emf.createEntityManager();
 		EntityTransaction trans = em.getTransaction();
-		boolean result = true;
 		
 		try {
 			trans.begin();
@@ -104,11 +99,10 @@ public class PerformerDaoJpaImpl implements PerformerDao {
 		catch (Exception ex) {
 			trans.rollback();
 			System.out.println("Rollback dur to [" + ex + "]");
-			result = false;
 		}
 		finally {
 			em.close();
 		}
-		return result;
+	
 	}
 }
